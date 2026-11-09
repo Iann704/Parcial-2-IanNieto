@@ -11,7 +11,8 @@ namespace Presentacion.interfaces
 
         event EventHandler? TickReloj;
         event EventHandler? CerrarSesionClick;
-
         void CerrarSesion();
+        event EventHandler? CambiarContrasenaClick;
+        void AbrirCambioContrasena();
     }
 }

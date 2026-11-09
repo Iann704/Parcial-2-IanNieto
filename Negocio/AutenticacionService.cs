@@ -54,5 +54,23 @@ namespace Negocio
                 ? usuario
                 : null;
         }
+
+        public void CambiarContrasena(string nombreUsuario, string actual, string nueva)
+        {
+            if (string.IsNullOrEmpty(actual))
+                throw new ArgumentException("Escribe tu contraseña actual.");
+            if (string.IsNullOrEmpty(nueva) || nueva.Length < 6)
+                throw new ArgumentException("La nueva contraseña debe tener al menos 6 caracteres.");
+            if (nueva == actual)
+                throw new ArgumentException("La nueva contraseña debe ser distinta a la actual.");
+
+            var usuario = _repositorio.ObtenerPorNombre(nombreUsuario);
+            if (usuario is null || !_verificarService.Verificar(actual, usuario.PasswordHash))
+                throw new ArgumentException("La contraseña actual es incorrecta.");
+
+            _repositorio.ActualizarContrasena(nombreUsuario, _hashService.GenerarHash(nueva));
+        }
+
+
     }
 }

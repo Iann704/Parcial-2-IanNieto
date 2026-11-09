@@ -22,14 +22,11 @@ public partial class FrmLogin : Form, ILoginView
     public void MostrarMensaje(string mensaje) =>
         MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-    public void AbrirPrincipal(Usuario usuario)
-    {
-        // Lo conectamos cuando creemos el formulario principal
-        MessageBox.Show($"Bienvenido, {usuario.NombreUsuario}");
-    }
+    public Action<Usuario>? AccionAbrirPrincipal { get; set; }
 
-    public void AbrirRegistro()
-    {
-        // Se completa en Program.cs / al crear FrmRegistro con su presentador
-    }
+    public void AbrirPrincipal(Usuario usuario) => AccionAbrirPrincipal?.Invoke(usuario);
+
+    public Action? AccionAbrirRegistro { get; set; }
+
+    public void AbrirRegistro() => AccionAbrirRegistro?.Invoke();
 }

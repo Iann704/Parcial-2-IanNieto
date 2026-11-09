@@ -50,5 +50,20 @@ namespace Datos
                 PasswordHash = reader.GetString(reader.GetOrdinal("Contra_U"))
             };
         }
+
+        public void ActualizarContrasena(string nombreUsuario, string nuevoHash)
+        {
+            using var cn = new SqlConnection(ConexionBD.CadenaConexion);
+            using var cmd = new SqlCommand("sp_CambiarContrasena", cn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("@Nombre_U", SqlDbType.VarChar, 50).Value = nombreUsuario;
+            cmd.Parameters.Add("@Contra_U", SqlDbType.VarChar, 500).Value = nuevoHash;
+
+            cn.Open();
+            cmd.ExecuteNonQuery();
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace Negocio
     {
         void Registrar(string nombreUsuario, string correo, string contrasena);
         Usuario? IniciarSesion(string nombreUsuario, string contrasena);
+        void CambiarContrasena(string nombreUsuario, string actual, string nueva);
     }
 }

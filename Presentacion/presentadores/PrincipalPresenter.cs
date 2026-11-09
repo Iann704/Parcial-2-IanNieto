@@ -20,6 +20,7 @@ namespace Presentacion.presentadores
             _vista.TickReloj += (s, e) =>
                 _vista.HoraActual = DateTime.Now.ToString("HH:mm:ss");
             _vista.CerrarSesionClick += (s, e) => _vista.CerrarSesion();
+            _vista.CambiarContrasenaClick += (s, e) => _vista.AbrirCambioContrasena();
         }
     }
 }

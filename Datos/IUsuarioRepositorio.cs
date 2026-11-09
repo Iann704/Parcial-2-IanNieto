@@ -8,5 +8,6 @@ namespace Datos
     {
         void Registrar(Usuario usuario);
         Usuario? ObtenerPorNombre(string nombreUsuario);
+        void ActualizarContrasena(string nombreUsuario, string nuevoHash);
     }
 }
