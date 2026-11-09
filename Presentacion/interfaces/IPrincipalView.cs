@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Presentacion.interfaces;
 
-namespace Presentacion.interfaces
+public interface IPrincipalView
 {
-    public interface IPrincipalView
-    {
-        string UsuarioActual { set; }
-        string HoraActual { set; }
+    string UsuarioActual { set; }
+    string HoraActual { set; }
 
-        event EventHandler? TickReloj;
-        event EventHandler? CerrarSesionClick;
-        void CerrarSesion();
-        event EventHandler? CambiarContrasenaClick;
-        void AbrirCambioContrasena();
-    }
+    event EventHandler? TickReloj;
+    event EventHandler? CerrarSesionClick;
+    event EventHandler? CambiarContrasenaClick;
+    event EventHandler? AlternarMenuClick;
+
+    void CerrarSesion();
+    void AbrirCambioContrasena();
+    void AlternarMenu();
 }

@@ -9,7 +9,6 @@ namespace Presentacion.presentadores
     public class PrincipalPresenter
     {
         private readonly IPrincipalView _vista;
-
         public PrincipalPresenter(IPrincipalView vista, Usuario usuario)
         {
             _vista = vista;
@@ -21,6 +20,7 @@ namespace Presentacion.presentadores
                 _vista.HoraActual = DateTime.Now.ToString("HH:mm:ss");
             _vista.CerrarSesionClick += (s, e) => _vista.CerrarSesion();
             _vista.CambiarContrasenaClick += (s, e) => _vista.AbrirCambioContrasena();
+            _vista.AlternarMenuClick += (s, e) => _vista.AlternarMenu();
         }
     }
 }

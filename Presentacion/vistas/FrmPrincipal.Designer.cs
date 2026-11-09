@@ -109,6 +109,7 @@
             // lblUsuario
             // 
             lblUsuario.Dock = DockStyle.Bottom;
+            lblUsuario.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.White;
             lblUsuario.Location = new Point(0, 503);
             lblUsuario.Name = "lblUsuario";
@@ -120,10 +121,11 @@
             // lblHora
             // 
             lblHora.AutoSize = true;
-            lblHora.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblHora.Location = new Point(416, 237);
+            lblHora.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblHora.ForeColor = SystemColors.HotTrack;
+            lblHora.Location = new Point(371, 241);
             lblHora.Name = "lblHora";
-            lblHora.Size = new Size(337, 106);
+            lblHora.Size = new Size(509, 159);
             lblHora.TabIndex = 1;
             lblHora.Text = "00:00:00";
             // 
@@ -135,20 +137,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(454, 128);
+            label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(453, 119);
             label1.Name = "label1";
-            label1.Size = new Size(259, 62);
+            label1.Size = new Size(328, 81);
             label1.TabIndex = 2;
             label1.Text = "Bienvenido";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Emoji", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(475, 200);
+            label2.Font = new Font("Segoe UI Emoji", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(481, 200);
             label2.Name = "label2";
-            label2.Size = new Size(223, 49);
+            label2.Size = new Size(262, 58);
             label2.TabIndex = 3;
             label2.Text = "Hora Actual:";
             // 
