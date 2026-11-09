@@ -6,7 +6,7 @@ Herramientas de la Programación Aplicada III (.NET), Grupo 1IL133, II Semestre 
 
 - **Autor:** Ian Nieto
 - **Instructora:** Ing. Irina Fong
-- **Fecha:** [fecha de entrega]
+- **Fecha:** 11/9/2026
 
 ## Descripción
 
@@ -27,14 +27,14 @@ El proyecto aplica el patrón **MVP** (Modelo-Vista-Presentador) sobre una arqui
 
 ## Tecnologías y versiones
 
-| Tecnología | Versión |
+| Tecnología |
 |---|---|
-| Lenguaje | C# [versión] |
-| Plataforma | .NET [versión, ej. 8.0] |
+| Lenguaje | C# |
+| Plataforma | .NET |
 | Interfaz | Windows Forms |
-| Base de datos | SQL Server [versión] |
-| IDE | Visual Studio [versión] |
-| Paquete NuGet | Microsoft.Data.SqlClient [versión] |
+| Base de datos | SQL Server |
+| IDE | Visual Studio |
+| Paquete NuGet | Microsoft.Data.SqlClient  |
 
 ## Arquitectura
 
@@ -84,7 +84,7 @@ La **Vista** solo muestra controles y avisa al **Presentador** mediante eventos.
 3. En SQL Server Management Studio, ejecuta `BaseDeDatos/script.sql`. Cambia la contraseña de ejemplo del login por una tuya.
 4. Crea la variable de entorno con la cadena de conexión (en PowerShell):
    ```powershell
-   setx PARCIAL_CONEXION "Server=localhost;Database=Parcial#2;User Id=aplicacion;Password=TU_CLAVE;TrustServerCertificate=True;"
+   setx PARCIAL_CONEXION "Server=localhost;Database=Parcial#2;User Id=aplicacion;Password=1234;TrustServerCertificate=True;"
    ```
 5. **Cierra y vuelve a abrir Visual Studio**, porque solo lee las variables al iniciar.
 6. Verifica que el proyecto de inicio sea `Presentacion` y pulsa **F5**.
@@ -101,4 +101,4 @@ La **Vista** solo muestra controles y avisa al **Presentador** mediante eventos.
 ## Autor
 
 **Ian Nieto**, Grupo 1IL133, II Semestre 2026
-Fecha: [fecha]
+Fecha: 11/9/2026
